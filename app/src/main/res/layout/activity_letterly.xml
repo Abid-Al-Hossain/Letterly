@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".Letterly">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--        &lt;!&ndash; Toolbar for a professional look &ndash;&gt;-->
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="?attr/colorPrimary"-->
+<!--            android:elevation="4dp"-->
+<!--            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"-->
+<!--            app:title="Letterly"-->
+<!--            app:titleTextColor="@android:color/white" />-->
+
+        <!-- Add Box and Remove Box buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addBoxButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:text="Add Box"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/removeBoxButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:text="Remove Box"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- RecyclerView for added boxes -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Find Words Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/findWordsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="12dp"
+            android:text="Find Words"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <!-- RecyclerView for word suggestions -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/wordsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
